@@ -53,7 +53,7 @@ import io from 'socket.io-client';
 
 const Dashboard = ({ dishes2 }) => {
   const [dishes, setDishes] = useState([]);
-  const socket = io(`${process.env.REACT_APP_API_URL}`);
+  const socket = io("https://real-time-toggle.onrender.com");
 console.log(`${process.env.REACT_APP_API_URL}`)
   useEffect(() => {
     socket.on('connect', () => {
