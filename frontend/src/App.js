@@ -5,7 +5,7 @@ import Search from './components/Search/Search.jsx';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const dummy=true;
+  
   const [data, setData]= useState([]);
   const handleSearch = async(query) => {
   try {
