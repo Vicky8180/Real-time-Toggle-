@@ -44,13 +44,13 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: "https://real-time-toggle.vercel.app/",
+  origin: "https://real-time-toggle.vercel.app",
   credentials: true
 }));
 
 const io = socketIo(server, {
   cors: {
-    origin: "https://real-time-toggle.vercel.app/",
+    origin: "https://real-time-toggle.vercel.app",
     methods: ["GET", "POST", "PATCH"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
