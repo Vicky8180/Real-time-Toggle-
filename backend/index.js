@@ -52,9 +52,7 @@ const io = socketIo(server, {
 });
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://toggleitnow.netlify.app/"],
-  methods: ["GET", "POST", "PATCH"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  origin: 'https://toggleitnow.netlify.app/',
   credentials: true
 }));
 app.use(express.json());
