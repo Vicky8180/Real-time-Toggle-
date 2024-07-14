@@ -1,0 +1,18 @@
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+   /* height: 100vh; */
+   height: calc(100vh - 200px);
+   padding-bottom: 50px;
+margin-top: 160px;    
+    background-color: #f8f9fa;
+  }
+  
+  @media (max-width: 768px) {
+  .dashboard{
+    padding-top: 70px;
+  }  
+  }
