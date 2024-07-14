@@ -53,8 +53,8 @@ import io from 'socket.io-client';
 
 const Dashboard = ({ dishes2 }) => {
   const [dishes, setDishes] = useState([]);
-  const socket = io('http://localhost:4000');
-
+  const socket = io(`${process.env.REACT_APP_API_URL}`);
+console.log(`${process.env.REACT_APP_API_URL}`)
   useEffect(() => {
     socket.on('connect', () => {
       console.log('Connection established');
