@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     // origin: "http://localhost:3000",
-    origin:"https://toggleitnow.netlify.app/",
+    origin:"https://real-time-toggle.onrender.com",
     methods: ["GET", "PUT"]
   }
 });
