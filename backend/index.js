@@ -42,19 +42,21 @@ const Dish = require("./model/dishModel");
 
 const app = express();
 const server = http.createServer(app);
+
+app.use(cors({
+  origin: 'https://toggleitnow.netlify.app/',
+  credentials: true
+}));
+
 const io = socketIo(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://toggleitnow.netlify.app/"],
+    origin: "https://toggleitnow.netlify.app/",
     methods: ["GET", "POST", "PATCH"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
 });
 
-app.use(cors({
-  origin: 'https://toggleitnow.netlify.app/',
-  credentials: true
-}));
 app.use(express.json());
 app.use('/api', dishRouter(io));
 
